@@ -6,7 +6,6 @@ import os
 load_dotenv()
 
 max_tokens = 300
-client = OpenAI(api_key=os.getenv("API_KEY"))
 
 to_normal_startup = f"""
 you are a Gen Alpha brainrot 
@@ -27,13 +26,15 @@ you token limit of {max_tokens}
 st.title("Slanguage")
 st.divider()
 
+api_key = st.text_input("Input your OpenAI API key.")
 user = st.text_input("Input your brainrot!")
 option = st.selectbox("Translation mode", ["Brainrot -> Normal", "Normal -> Brainrot"])
 send = st.button("Send")
 
 
 
-if send and user:
+if send and user and option and api_key:
+    client = OpenAI(api_key=api_key)
     placeholder = st.empty()
     partial_response = ""
     
