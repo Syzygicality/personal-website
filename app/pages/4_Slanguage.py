@@ -26,7 +26,7 @@ you token limit of {max_tokens}
 st.title("Slanguage")
 st.divider()
 
-api_key = st.text_input("Input your OpenAI API key.")
+api_key = st.text_input("Input your OpenAI API key", type="password")
 user = st.text_input("Input your brainrot!")
 option = st.selectbox("Translation mode", ["Brainrot -> Normal", "Normal -> Brainrot"])
 send = st.button("Send")
