@@ -3,6 +3,11 @@ from openai import OpenAI
 from dotenv import load_dotenv
 import os
 
+st.set_page_config(
+    page_title="Slanguage",
+    page_icon="🚀",
+)
+
 load_dotenv()
 
 max_tokens = 300
@@ -26,15 +31,14 @@ you token limit of {max_tokens}
 st.title("Slanguage")
 st.divider()
 
-api_key = st.text_input("Input your OpenAI API key", type="password")
 user = st.text_input("Input your brainrot!")
 option = st.selectbox("Translation mode", ["Brainrot -> Normal", "Normal -> Brainrot"])
 send = st.button("Send")
 
 
 
-if send and user and option and api_key:
-    client = OpenAI(api_key=api_key)
+if send and user and option:
+    client = OpenAI(api_key=os.getenv("API_KEY"))
     placeholder = st.empty()
     partial_response = ""
     
