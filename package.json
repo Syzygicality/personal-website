@@ -17,9 +17,5 @@
   "bugs": {
     "url": "https://github.com/Syzygicality/personal-website/issues"
   },
-  "homepage": "https://github.com/Syzygicality/personal-website#readme",
-  "dependencies": {
-    "@tailwindcss/cli": "^4.1.17",
-    "tailwindcss": "^4.1.17"
-  }
+  "homepage": "https://github.com/Syzygicality/personal-website#readme"
 }
