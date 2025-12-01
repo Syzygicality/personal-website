@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edison Wang</title>
+        <link rel="icon" type="image/svg" href="/assets/favicon.svg">
+        <link href="src/output.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="header"></div>
+        <script>
+        async function include(id, file) {
+            const html = await fetch(file).then(r => r.text());
+            document.getElementById(id).innerHTML = html;
+        }
+        include("header", "components/header.html");
+        </script>
+        <p>Hello world!</p>
+        <script src="index.js" defer></script>
+    </body>
 </html>
