@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edison Wang</title>
+        <link rel="icon" type="image/png" href="assets/favicon.png">
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div class="flex flex-row min-h-screen">
+            <div class="lightShade flex-1 bg-gray-100 transition-colors duration-500"></div>
+            <div class="lightAccent flex-1 bg-gray-300 transition-colors duration-500"></div>
+            <div class="main flex-1 bg-gray-500 transition-colors duration-500 flex justify-center"><button id="btn" class="px-4 py-2 bg-white self-center justify-center rounded-2xl hover:bg-blue-100">Press Me!</button></div>
+            <div class="darkAccent flex-1 bg-gray-700 transition-colors duration-500"></div>
+            <div class="darkShade flex-1 bg-gray-900 transition-colors duration-500"></div>
+        </div>
+        <script src="index.js" defer></script>
+    </body>
 </html>
