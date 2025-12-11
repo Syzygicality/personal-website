@@ -28,9 +28,13 @@ async function applyPalette(palette) {
         const color = `rgb(${rgb[0]},${rgb[1]},${rgb[2]})`
         const elements = document.getElementsByClassName(cls)
         for (let element of elements) {
-            element.style.backgroundColor = color
-            element.style.textColor = color
-            element.style.borderColor = color
+            if (element.tagName === "DIV") {
+                element.style.backgroundColor = color
+            } else if (element.tagName === "IMG" || element.tagName === "HR") {
+                element.style.borderColor = color
+            } else {
+                element.style.color = color
+            }
         }
     }
 }
@@ -48,7 +52,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         btn.disabled = true
         currentPalette = nextPalette
         await applyPalette(currentPalette)
-        console.log(currentPalette)
         nextPalette = await getPalette()
         btn.disabled = false
     })
