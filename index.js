@@ -5,7 +5,7 @@ async function include(id, file) {
 
 async function getPalette() {
     try {
-        const res = await fetch('http://colormind.io/api/', {
+        const res = await fetch('https://corsproxy.io/?url=http://colormind.io/api/', {
             method: "POST",
             body: JSON.stringify({model: 'ui'})
         })
