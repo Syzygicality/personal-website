@@ -1,3 +1,11 @@
+const defaultPalette = [
+                    [242, 244, 242],
+                    [145, 211, 220],
+                    [26, 138, 164],
+                    [79, 129, 154],
+                    [19, 28, 40]
+                ]
+
 async function include(id, file) {
     const html = await fetch(file).then(r => r.text());
     document.getElementById(id).innerHTML = html;
@@ -13,6 +21,7 @@ async function getPalette() {
         return data.result
     } catch(err) {
         console.error(err)
+        return defaultPalette
     }
 }
 
@@ -42,9 +51,10 @@ async function applyPalette(palette) {
 document.addEventListener("DOMContentLoaded", async () => {
     await include("header", "/components/_header.html")
     await include("footer", "/components/_footer.html")
+    
+    await applyPalette(defaultPalette)
     let currentPalette, nextPalette
     currentPalette = await getPalette()
-    await applyPalette(currentPalette)
     nextPalette = await getPalette()
 
     const btn = document.getElementById("btn")
