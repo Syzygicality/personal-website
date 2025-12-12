@@ -45,13 +45,13 @@
                     </div>
                     <hr class="lightAccent w-2/3 self-center border border-2 rounded-full">
                     <div class="flex flex-col flex-grow gap-8 px-4 sm:px-8 md:px-20 lg:px-40 xl:px-60">
-                        <p class="darkShade text-6xl font-bold text-gray-900 text-center md:text-left">About Me</p>
+                        <p id="about" class="darkShade text-6xl font-bold text-gray-900 text-center md:text-left">About Me</p>
                         <p class="darkShade">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis lobortis feugiat. Suspendisse potenti. Aliquam nec turpis mi. Morbi dictum eros sed quam blandit faucibus. In hac habitasse platea dictumst. Donec at pellentesque nibh. Ut risus sem, convallis in accumsan non, facilisis id arcu. Integer leo lorem, congue sed leo id, consequat tincidunt tellus. Praesent ac congue est, nec dapibus lacus.</p>
                     </div>
-                    <div class="darkShade bg-gray-900 text-white pt-12 pb-12 px-4 sm:px-8 md:px-20 lg:px-40 xl:px-60">
-                        <h2 class="lightShade text-5xl font-bold text-center mb-12">Technical Skills</h2>
-                        <div class="flex flex-col gap-8">
-                            <div class="darkAccent flex flex-col items-center bg-gray-800 py-4 px-8 gap-4 rounded-2xl shadow-[20px_20px_10px_rgba(0,0,0,0.7)]">
+                    <div class="darkShade bg-gray-900 text-white pt-8 pb-8 pr-4 sm:pr-8 md:pr-20 lg:pr-40 xl:pr-60 ml-4 sm:ml-8 md:ml-20 lg:ml-40 xl:ml-60 rounded-bl-2xl rounded-tl-2xl">
+                        <h2 id="skills" class="lightShade text-5xl font-bold text-center mb-12">Technical Skills</h2>
+                        <div class="flex flex-col gap-8 mx-8">
+                            <div class="darkAccent flex flex-col items-center bg-gray-800 py-4 px-8 gap-4 rounded-full shadow-[20px_20px_10px_rgba(0,0,0,0.7)]">
                                 <h3 class="lightShade text-center text-2xl font-semibold">Languages</h3>
                                 <hr class="lightShade w-1/2 self-center">
                                 <p class="lightShade text-center text-lg opacity-90">
@@ -66,14 +66,14 @@
                                             </span>
                                 </p>
                             </div>
-                            <div class="darkAccent flex flex-col items-center bg-gray-800 py-4 px-8 gap-4 rounded-2xl shadow-[20px_20px_10px_rgba(0,0,0,0.7)]">
+                            <div class="darkAccent flex flex-col items-center bg-gray-800 py-4 px-8 gap-4 rounded-full shadow-[20px_20px_10px_rgba(0,0,0,0.7)]">
                                 <h3 class="lightShade text-center text-2xl font-semibold">Libraries & Frameworks</h3>
                                 <hr class="lightShade w-1/2 self-center">
                                 <p class="lightShade text-center text-lg opacity-90">
                                     Django · FastAPI · Flask · Streamlit · Tailwind CSS
                                 </p>
                             </div>
-                            <div class="darkAccent flex flex-col items-center bg-gray-800 py-4 px-8 gap-4 rounded-2xl shadow-[20px_20px_10px_rgba(0,0,0,0.7)]">
+                            <div class="darkAccent flex flex-col items-center bg-gray-800 py-4 px-8 gap-4 rounded-full shadow-[20px_20px_10px_rgba(0,0,0,0.7)]">
                                 <h3 class="lightShade text-center text-2xl font-semibold">Developer Tools</h3>
                                 <hr class="lightShade w-1/2 self-center">
                                 <p class="lightShade text-center text-lg opacity-90">
@@ -83,10 +83,10 @@
                         </div>
                     </div>
                     <div class="flex flex-col gap-12 pb-12 px-4 sm:px-8 md:px-20 lg:px-44 xl:px-60">
-                        <p class="darkShade text-6xl font-bold text-center md:text-left text-gray-900">
+                        <p id="projects" class="darkShade text-6xl font-bold text-center md:text-left text-gray-900">
                             Projects
                         </p>
-                        <p class="darkShade text-lg">Here are some of my personal projects!</p>
+                        <p class="darkShade text-lg text-center md:text-left">Here are some of my personal projects!</p>
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                             
                             <!-- Card 1 -->
@@ -125,6 +125,18 @@
             </main>
             <div id="footer"></div>
             <script src="index.js" defer></script>
+            <script>
+                tailwind.config = {
+                    theme: {
+                        extend: {
+                            fontFamily: {
+                                inter: ['Inter', 'sans-serif'],
+                                fira: ['"Fira Code"', 'monospace'],
+                            }
+                        }
+                    }
+                }
+            </script>
         </div>
     </body>
 </html>
