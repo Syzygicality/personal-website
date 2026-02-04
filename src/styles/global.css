@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+html, a:hover {
+  cursor: crosshair;
+}
+
+@keyframes systemBoot {
+  0% { opacity: 0; transform: translateY(10px); filter: brightness(2); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-boot {
+  animation: systemBoot 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
