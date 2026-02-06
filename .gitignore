@@ -24,3 +24,14 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# python virtual env folder
+/.venv
+
+# sqlite DBs
+*.db
+*.sqlite
+
+# python residual files
+/__pycache__
+*.pyc

@@ -39,11 +39,39 @@ import UWShield from '../../public/shield.png'
 						}
 						</script>
 					</div>
-					<div class="hidden md:block">
-						<svg width="60" height="60" viewBox="0 0 40 40" class="border border-black">
+					<div class="hidden sm:flex gap-2">
+
+						<!-- Registration Reticle -->
+						<svg width="67" height="67" viewBox="0 0 40 40" class="border border-black">
+							<path d="M0 0h40v40H0z" fill="none"/>
+							<path d="M20 4v32M4 20h32" stroke="black" stroke-width="0.5"/>
+							<circle cx="20" cy="20" r="8" fill="none" stroke="black" stroke-width="0.5"/>
+							<circle cx="20" cy="20" r="2" fill="black"/>
+						</svg>
+
+						<!-- Data Grid -->
+						<svg width="67" height="67" viewBox="0 0 40 40" class="border border-black">
+							<path d="M0 0h40v40H0z" fill="none"/>
+							<g stroke="black" stroke-width="0.4">
+								<path d="M0 10h40M0 20h40M0 30h40"/>
+								<path d="M10 0v40M20 0v40M30 0v40"/>
+							</g>
+							<rect x="20" y="10" width="10" height="10" fill="black"/>
+						</svg>
+
+						<!-- Scan Frame -->
+						<svg width="67" height="67" viewBox="0 0 40 40" class="border border-black">
+							<path d="M0 0h40v40H0z" fill="none"/>
+							<path d="M4 10V4h6M30 4h6v6M36 30v6h-6M10 36H4v-6"
+								fill="none" stroke="black" stroke-width="1"/>
+							<circle cx="20" cy="20" r="1.5" fill="black"/>
+						</svg>
+
+							<!-- Target / Cross -->
+						<svg width="67" height="67" viewBox="0 0 40 40" class="border border-black">
 							<path d="M0 0h40v40H0z" fill="none"/>
 							<path d="M20 0v40M0 20h40" stroke="black" stroke-width="0.5"/>
-							<circle cx="20" cy="20" r="10" fill="black" />
+							<circle cx="20" cy="20" r="10" fill="black"/>
 						</svg>
 					</div>
 				</div>
@@ -67,39 +95,55 @@ import UWShield from '../../public/shield.png'
 						<Image src={headShot} alt='Me!' class="w-full h-auto" />
 						<div class="text-[10px] font-mono uppercase leading-tight">
 							<span>All contribution produced and performed by Eddie.</span>
-							<span>(P) & (C) 2030 UW CS. 
-							Design by Intent.</span>
+							<span>(P) & (C) 2030 UW CS. Design by Intent.</span>
 						</div>
 						<div class="h-8 bg-[linear-gradient(67deg,rgba(250,13,0,1)_0%,rgba(254,189,48,1)_39%,rgba(230,239,242,1)_64%,rgba(125,205,255,1)_92%)]"></div>
 					</div>
 
 					
 				</div>
-				<div class="md:col-span-8 p-6 gap-6 md:border-l border-black flex flex-col relative justify-between">
+				<div class="md:col-span-8 px-6 pb-6 md:p-6 gap-6 md:border-l border-black flex flex-col relative justify-between">
 					<p class="text-2xl md:text-4xl font-medium tracking-tight leading-tight">
 						Computer Science student at UWaterloo.
 						Backend Developer and Reviewer at satellite design team, UW Orbital. 
 						Currently building mission-critical ground station systems. 
-						Focused on building web applications to improve everyday life.
+						Dedicated to creating web applications to improve everyday life.
 					</p>
-					
-					<div class="flex gap-6">
-						<a href="https://github.com/Syzygicality" target="_blank" aria-label="GitHub" 
-						class="w-12 h-12 border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors group duration-250">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-white">
-								<path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.28 1.15-.28 2.35 0 3.5-.73 1.02-1.08 2.25-1 3.5 0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
-								<path d="M9 18c-4.51 2-5-2-7-2"></path>
-							</svg>
-						</a>
+					<div class="flex justify-between">
+						<div class="flex gap-6">
+							<a href="https://github.com/Syzygicality" target="_blank" aria-label="GitHub" 
+							class="w-12 h-12 border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors group duration-250">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-white">
+									<path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.28 1.15-.28 2.35 0 3.5-.73 1.02-1.08 2.25-1 3.5 0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+									<path d="M9 18c-4.51 2-5-2-7-2"></path>
+								</svg>
+							</a>
 
-						<a href="https://linkedin.com/in/edison-wang-s7z7g7/" target="_blank" aria-label="LinkedIn" 
-						class="w-12 h-12 border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors group duration-250">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-white">
-								<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-								<rect width="4" height="12" x="2" y="9"></rect>
-								<circle cx="4" cy="4" r="2"></circle>
-							</svg>
-						</a>
+							<a href="https://linkedin.com/in/edison-wang-s7z7g7/" target="_blank" aria-label="LinkedIn" 
+							class="w-12 h-12 border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors group duration-250">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-white">
+									<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+									<rect width="4" height="12" x="2" y="9"></rect>
+									<circle cx="4" cy="4" r="2"></circle>
+								</svg>
+							</a>
+							<a href="https://instagram.com/wanderings67/" target="_blank" aria-label="Instagram" 
+							class="w-12 h-12 border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors group duration-250">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-white">
+									<rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+									<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+									<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+								</svg>
+							</a>
+						</div>
+						<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-black">
+							<circle cx="12" cy="12" r="10" />
+							<ellipse cx="12" cy="12" rx="3" ry="10" />
+							<ellipse cx="12" cy="12" rx="7" ry="10" />
+							<line x1="2" y1="12" x2="22" y2="12" />
+							<path d="M3.6 16h16.8" />
+							<path d="M3.6 8h16.8" />
+						</svg>
 					</div>
 				</div>
 			</section>
@@ -147,11 +191,11 @@ import UWShield from '../../public/shield.png'
 					Mauris et maximus tellus, id hendrerit lectus. Aenean pretium justo ac tellus ornare, ut interdum lacus 
 					volutpat. Vestibulum in tortor id lorem aliquet bibendum a non risus. Donec at ligula lobortis, pellentesque 
 					lectus eget, ornare metus. Phasellus a felis in enim pellentesque mattis. Duis feugiat orci id eros dictum
-					 pharetra. Nullam fringilla neque at volutpat tincidunt. Suspendisse porta posuere auctor. Sed dui velit, 
-					 elementum eget sapien sed, cursus auctor felis. Quisque nec magna sapien. Pellentesque placerat, ex non 
-					 vehicula interdum, velit quam efficitur enim, sed malesuada nisl ipsum eu sapien. 
-					 <br />
-					 <br />
+					pharetra. Nullam fringilla neque at volutpat tincidunt. Suspendisse porta posuere auctor. Sed dui velit, 
+					elementum eget sapien sed, cursus auctor felis. Quisque nec magna sapien. Pellentesque placerat, ex non 
+					vehicula interdum, velit quam efficitur enim, sed malesuada nisl ipsum eu sapien. 
+				</p>
+				<p class="text-l md:text-xl tracking-tight leading-tight text-black">
 					Mauris dignissim egestas tortor, nec aliquam mauris ornare sed. Maecenas varius eu mi nec efficitur. Duis 
 					ultrices mi ac dui viverra, nec volutpat orci varius. Ut sodales, sem vel mollis efficitur, odio nisi aliquet 
 					risus, vitae tempus mi nibh vel eros. Proin pellentesque congue dolor. Vestibulum imperdiet a sapien vitae 
@@ -161,6 +205,69 @@ import UWShield from '../../public/shield.png'
 					euismod libero. Nunc euismod sit amet ipsum id molestie. Ut efficitur tincidunt tortor ac sollicitudin. Fusce 
 					lectus ante, rutrum sed sodales in, dapibus a justo.
 				</p>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 border-black">
+					<div class="flex flex-col gap-2">
+						<div class="border-b border-black pb-1 text-center">
+							<span class="font-mono text-[9px] font-bold uppercase tracking-widest">Languages</span>
+						</div>
+						<ul class="font-mono text-sm leading-tight grid grid-cols-3 gap-1 justify-items-center">
+							<li>Python</li>
+							<li>JavaScript</li>
+							<li>C</li>
+							<li>SQL</li>
+							<li>HTML/CSS</li>
+							<li>Bash</li>
+							<li>LaTeX</li>
+							<li>Racket</li>
+						</ul>
+					</div>
+
+					<div class="flex flex-col gap-2">
+						<div class="border-b border-black pb-1 text-center">
+							<span class="font-mono text-[9px] font-bold uppercase tracking-widest">Frameworks & Libraries</span>
+						</div>
+						<ul class="font-mono text-sm leading-tight grid grid-cols-3 gap-1 justify-items-center">
+							<li>Django</li>
+							<li>DRF</li>
+							<li>FastAPI</li>
+							<li>Flask</li>
+							<li>Streamlit</li>
+							<li>Astro</li>
+							<li>Tailwind</li>
+							<li>Bootstrap</li>
+							<li>Node.js</li>
+						</ul>
+					</div>
+
+					<div class="flex flex-col gap-2">
+						<div class="border-b border-black pb-1 text-center">
+							<span class="font-mono text-[9px] font-bold uppercase tracking-widest">Databases</span>
+						</div>
+						<ul class="font-mono text-sm leading-tight grid grid-cols-3 gap-1 justify-items-center">
+							<li>PostgreSQL</li>
+							<li>MySQL</li>
+							<li>SQLite</li>
+							<li>MongoDB</li>
+							<li>Redis</li>
+						</ul>
+					</div>
+
+					<div class="flex flex-col gap-2">
+						<div class="border-b border-black pb-1 text-center">
+							<span class="font-mono text-[9px] font-bold uppercase tracking-widest">Tools & Technologies</span>
+						</div>
+						<ul class="font-mono text-sm leading-tight grid grid-cols-3 gap-1 justify-items-center">
+							<li>Figma</li>
+							<li>Git</li>
+							<li>GitHub</li>
+							<li>Docker</li>
+							<li>Celery</li>
+							<li>Insomnia</li>
+							<li>Render</li>
+							<li>Vercel</li>
+						</ul>
+					</div>
+				</div>
 			</section>
 		</div>
     
