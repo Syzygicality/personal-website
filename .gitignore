@@ -1,7 +1,6 @@
-# build output
-dist/
-# generated types
-.astro/
+# Next.js build output
+.next/
+out/
 
 # dependencies
 node_modules/
@@ -35,3 +34,7 @@ pnpm-debug.log*
 # python residual files
 /__pycache__
 *.pyc
+
+# TypeScript build info
+*.tsbuildinfo
+next-env.d.ts
