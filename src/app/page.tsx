@@ -150,15 +150,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="relative flex overflow-x-hidden border-t border-black bg-black text-white py-2 font-mono text-xs font-bold uppercase tracking-widest">
-          <div className="animate-marquee whitespace-nowrap flex">
-            {['|', 'My Top Ten:', 'Justice', 'Digitalism', "L'Impératrice", 'Daft Punk', 'Bonobo', 'Gesaffelstein', 'STRFKR', 'Kavinsky', 'Miami Horror', 'Kanye (pre-crashout)', '|', 'My Top Ten:', 'Justice', 'Digitalism', "L'Impératrice", 'Daft Punk', 'Bonobo', 'Gesaffelstein', 'STRFKR', 'Kavinsky', 'Miami Horror', 'Kanye (pre-crashout)'].map((item, i) => (
-              <span key={i} className="mx-4">{item}</span>
-            ))}
-          </div>
-        </div>
-
-        <section className="hidden md:grid p-6 gap-4 bg-[linear-gradient(17deg,rgba(255,255,255,1)_70%,rgba(98,171,245,1)_85%,rgba(151,45,196,1)_100%)] backdrop-blur-sm h-40"></section>
+        <section className="hidden md:grid p-6 gap-4 border-t border-black bg-[linear-gradient(17deg,rgba(255,255,255,1)_70%,rgba(98,171,245,1)_85%,rgba(151,45,196,1)_100%)] backdrop-blur-sm h-40"></section>
 
         <section id="about" className="p-6 flex flex-col gap-4 bg-white/50 backdrop-blur-sm">
           <div className="flex items-center gap-2">
