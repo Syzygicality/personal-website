@@ -5,13 +5,17 @@ interface SkillSectionProps {
 
 export default function SkillSection({ title, items }: SkillSectionProps) {
   return (
-    <div className="flex flex-col gap-2">
-      <div className="border-b border-black pb-1 text-center">
-        <span className="font-mono text-[9px] font-bold uppercase tracking-widest">{title}</span>
+    <div className="flex items-center gap-6 py-3">
+      <div className="w-36 shrink-0 border-r border-current pr-6 text-right">
+        <span className="font-mono text-xs font-bold uppercase tracking-widest">{title}</span>
       </div>
-      <ul className="font-mono text-sm leading-tight grid grid-cols-3 gap-1 justify-items-center">
-        {items.map(s => <li key={s}>{s}</li>)}
-      </ul>
+      <div className="flex flex-wrap gap-1">
+        {items.map(s => (
+          <span key={s} className="font-mono text-xs border border-current px-1.5 py-0.5 leading-none whitespace-nowrap hover:bg-black hover:text-white transition-colors group duration-250">
+            {s}
+          </span>
+        ))}
+      </div>
     </div>
   )
 }

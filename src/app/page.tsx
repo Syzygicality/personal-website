@@ -40,8 +40,8 @@ export default function Home() {
 
         <nav className="grid grid-cols-1 md:grid-cols-4 border-b border-black font-mono text-xs font-bold uppercase">
           <a href="#about" className={navLink}>01. Identity</a>
-          <a href="#projects" className={navLink}>02. Repository</a>
-          <a href="#contact" className={navLink}>03. Interface</a>
+          <a href="#skills" className={navLink}>02. Capability</a>
+          <a href="#projects" className={navLink}>03. Repository</a>
           <div className="p-4 flex items-center justify-between">
             <span>Rec. WF/LR2-4337H</span>
             <div className="w-3 h-3 bg-black" />
@@ -81,20 +81,27 @@ export default function Home() {
             as document software architecture and system integration. You can catch me staying up late studying for classes
             and working on personal projects, and regularly participating in hackathons. What really motivates me is the
             process and result of developing software to solve everyday problems and reduce common frictions. I care greatly
-            about ensuring that my applications are secure, performant, and most importantly user-oriented.
+            about ensuring that my applications are secure, performant, and most importantly user-oriented. 
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <SkillSection title="Languages" items={['Python', 'JavaScript', 'C', 'SQL', 'HTML/CSS', 'Bash', 'LaTeX', 'Racket']} />
-            <SkillSection title="Frameworks & Libraries" items={['Django', 'DRF', 'FastAPI', 'Flask', 'Streamlit', 'Next.js', 'Tailwind', 'Bootstrap', 'Node.js']} />
-            <SkillSection title="Databases" items={['PostgreSQL', 'MySQL', 'SQLite', 'MongoDB', 'Redis']} />
-            <SkillSection title="Tools & Technologies" items={['Figma', 'Git', 'GitHub', 'Docker', 'Celery', 'Insomnia', 'Render', 'Vercel']} />
+        </section>
+
+        <section id="skills" className="p-6 flex flex-col gap-4 bg-white text-black">
+          <SectionHeader label="Section_02 // Capability" />
+          <h3 className="text-2xl md:text-4xl font-bold">Technical Skills</h3>
+          <div className="flex flex-col">
+            <SkillSection title="Languages" items={['Python', 'JavaScript', 'TypeScript', 'C', 'SQL', 'HTML/CSS', 'Bash', 'LaTeX', 'Racket']} />
+            <SkillSection title="Frameworks & Libraries" items={['FastAPI', 'Django', 'Django REST Framework', 'Pytest', 'Flask', 'Streamlit', 'Tailwind CSS', 'Bootstrap', 'Next.js', 'React.js', 'Node.js', 'Express.js', 'Fastify']} />
+            <SkillSection title="Databases" items={['PostgreSQL', 'MySQL', 'Supabase', 'MongoDB', 'Redis', 'SQLite']} />
+            <SkillSection title="Tools & Technologies" items={['Git', 'GitHub', 'Docker', 'Celery', 'Postman', 'Insomnia', 'VS Code', 'Vercel', 'Render', 'Claude Code et al.']} />
           </div>
         </section>
 
         <section className="hidden md:grid bg-[linear-gradient(197deg,rgba(255,255,255,1)_70%,rgba(98,171,245,1)_85%,rgba(151,45,196,1)_100%)] backdrop-blur-sm h-40" />
 
+        
+
         <section id="projects" className="border-t border-black p-6 flex flex-col gap-4 bg-black text-white">
-          <SectionHeader label="Section_02 // Repository" inverted />
+          <SectionHeader label="Section_03 // Repository" inverted />
           <div className="flex justify-between items-center">
             <h3 className="text-2xl md:text-4xl font-bold">My Projects</h3>
             <MemoryAddress />

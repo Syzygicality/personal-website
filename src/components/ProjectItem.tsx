@@ -13,7 +13,7 @@ interface ProjectItemProps {
 export default function ProjectItem({ id, status, title, description, footnote, tags, image }: ProjectItemProps) {
   return (
     <div className="w-full border border-white flex flex-col md:flex-row">
-      <div className="border-b md:border-b-0 md:border-r border-black p-2 flex md:flex-col justify-between items-center bg-black text-white font-mono text-[9px] uppercase tracking-tighter">
+      <div className="border-b md:border-b-0 md:border-r border-black p-2 flex md:flex-col justify-between items-center bg-white text-black font-mono text-[9px] uppercase tracking-tighter">
         <span className="[writing-mode:vertical-lr] rotate-180 hidden md:block">Project_ID: {id}</span>
         <span className="md:hidden">ID: {id}</span>
         <span className="[writing-mode:vertical-lr] rotate-180 hidden md:block">Status: {status}</span>
@@ -35,7 +35,7 @@ export default function ProjectItem({ id, status, title, description, footnote, 
           </div>
         </div>
         <div className="md:w-64 shrink-0 flex items-center">
-          <div className="border border-white bg-white">
+          <div className="border border-white">
             <Image src={image.src} alt={image.alt} width={256} height={192} className="w-full h-auto" />
           </div>
         </div>
