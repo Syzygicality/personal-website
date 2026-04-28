@@ -1,10 +1,15 @@
 import Image from 'next/image'
 import DateDisplay from '@/components/DateDisplay'
 import MemoryAddress from '@/components/MemoryAddress'
+import ProjectItem from '@/components/ProjectItem'
+import SkillSection from '@/components/SkillSection'
+
+const navLink = "p-4 md:border-r border-b md:border-b-0 border-black hover:bg-black hover:text-white transition-colors duration-250"
+const socialLink = "w-12 h-12 border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors group duration-250"
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-4 md:p-8 font-sans selection:bg-amber-400 animate-boot bg-transparent opacity-0">
+    <main className="min-h-screen p-4 md:p-8 font-sans selection:bg-amber-400 animate-boot opacity-0">
 
       <div className="max-w-6xl mx-auto border border-black min-h-[90vh] flex flex-col bg-white backdrop-blur-sm">
         <div className="fixed top-0 right-0">
@@ -68,9 +73,9 @@ export default function Home() {
         </section>
 
         <nav className="grid grid-cols-1 md:grid-cols-4 border-b border-black font-mono text-xs font-bold uppercase">
-          <a href="#about" className="p-4 md:border-r border-b md:border-b-0 border-black hover:bg-black hover:text-white transition-colors duration-250">01. Identity</a>
-          <a href="#projects" className="p-4 md:border-r border-b md:border-b-0 border-black hover:bg-black hover:text-white transition-colors duration-250">02. Repository</a>
-          <a href="#contact" className="p-4 md:border-r border-b md:border-b-0 border-black hover:bg-black hover:text-white transition-colors duration-250">03. Interface</a>
+          <a href="#about" className={navLink}>01. Identity</a>
+          <a href="#projects" className={navLink}>02. Repository</a>
+          <a href="#contact" className={navLink}>03. Interface</a>
           <div className="p-4 flex items-center justify-between">
             <span>Rec. WF/LR2-4337H</span>
             <div className="w-3 h-3 bg-black"></div>
@@ -82,14 +87,14 @@ export default function Home() {
             <div className="space-y-4">
               <Image src="/headshot.png" alt="Me!" width={400} height={400} className="w-full h-auto" />
               <div className="text-[10px] font-mono uppercase leading-tight">
-                <span>All contribution produced and performed by Eddie.</span>
-                <span>(P) &amp; (C) 2030 UW CS. Design by Intent.</span>
+                <span>All contribution produced and performed by Eddie. </span>
+                <span>(P) & (C) 2030 UW CS. Design by Intent.</span>
               </div>
               <div className="h-8 bg-[linear-gradient(67deg,rgba(250,13,0,1)_0%,rgba(254,189,48,1)_39%,rgba(230,239,242,1)_64%,rgba(125,205,255,1)_92%)]"></div>
             </div>
           </div>
 
-          <div className="md:col-span-8 px-6 pb-6 md:p-6 gap-6 md:border-l border-black flex flex-col relative justify-between">
+          <div className="md:col-span-8 px-6 pb-6 md:p-6 gap-6 md:border-l border-black flex flex-col justify-between">
             <p className="text-2xl md:text-4xl font-medium tracking-tight leading-tight">
               Computer Science student at UWaterloo.
               Backend Developer and Reviewer at satellite design team, UW Orbital.
@@ -99,7 +104,7 @@ export default function Home() {
             <div className="flex justify-between">
               <div className="flex gap-6">
                 <a href="https://github.com/Syzygicality" target="_blank" rel="noreferrer" aria-label="GitHub"
-                  className="w-12 h-12 border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors group duration-250">
+                  className={socialLink}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:stroke-white">
                     <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.28 1.15-.28 2.35 0 3.5-.73 1.02-1.08 2.25-1 3.5 0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
                     <path d="M9 18c-4.51 2-5-2-7-2" />
@@ -107,7 +112,7 @@ export default function Home() {
                 </a>
 
                 <a href="https://linkedin.com/in/edison-wang-s7z7g7/" target="_blank" rel="noreferrer" aria-label="LinkedIn"
-                  className="w-12 h-12 border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors group duration-250">
+                  className={socialLink}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:stroke-white">
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                     <rect width="4" height="12" x="2" y="9" />
@@ -116,7 +121,7 @@ export default function Home() {
                 </a>
 
                 <a href="https://instagram.com/wanderings67/" target="_blank" rel="noreferrer" aria-label="Instagram"
-                  className="w-12 h-12 border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors group duration-250">
+                  className={socialLink}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:stroke-white">
                     <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
@@ -125,7 +130,7 @@ export default function Home() {
                 </a>
 
                 <a href="/resume.pdf" download="Edison_Wang_Resume.pdf" aria-label="Download Resume"
-                  className="w-12 h-12 border border-black flex items-center justify-center hover:bg-black hover:text-white transition-colors group duration-250">
+                  className={socialLink}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:hidden">
                     <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
                     <polyline points="14 2 14 8 20 8" />
@@ -161,7 +166,7 @@ export default function Home() {
           </div>
           <h3 className="text-2xl md:text-4xl font-bold">About Me</h3>
           <p className="text-l md:text-xl leading-tight text-black text-justify">
-            I&apos;m a CS student here at UWaterloo, and a backend developer and reviewer at UW Orbital, UWaterloo&apos;s only
+            I'm a CS student here at UWaterloo, and a backend developer and reviewer at UW Orbital, UWaterloo's only
             satellite design team. In addition to implementing core API features, I review PRs to the codebase, as well
             as document software architecture and system integration. You can catch me staying up late studying for classes
             and working on personal projects, and regularly participating in hackathons. What really motivates me is the
@@ -169,53 +174,22 @@ export default function Home() {
             about ensuring that my applications are secure, performant, and most importantly user-oriented.
           </p>
           <p className="text-l md:text-xl leading-tight text-black text-justify">
-            I&apos;m currently working on Resumaker, an AI-integrated resume editing platform. Users can store bios, skills,
+            I'm currently working on Resumaker, an AI-integrated resume editing platform. Users can store bios, skills,
             experiences, projects, bullet points, and much more. Create and edit resumes with AI suggestions through
             a user-friendly, resume-optimized interface, and download the fully templated document formatted in the style of
-            Jake&apos;s Resume template. (If you&apos;re interested in collaborating, shoot me a message!)
+            Jake's Resume template. (If you're interested in collaborating, shoot me a message!)
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 border-black">
-            <div className="flex flex-col gap-2">
-              <div className="border-b border-black pb-1 text-center">
-                <span className="font-mono text-[9px] font-bold uppercase tracking-widest">Languages</span>
-              </div>
-              <ul className="font-mono text-sm leading-tight grid grid-cols-3 gap-1 justify-items-center">
-                {['Python', 'JavaScript', 'C', 'SQL', 'HTML/CSS', 'Bash', 'LaTeX', 'Racket'].map(s => <li key={s}>{s}</li>)}
-              </ul>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <div className="border-b border-black pb-1 text-center">
-                <span className="font-mono text-[9px] font-bold uppercase tracking-widest">Frameworks &amp; Libraries</span>
-              </div>
-              <ul className="font-mono text-sm leading-tight grid grid-cols-3 gap-1 justify-items-center">
-                {['Django', 'DRF', 'FastAPI', 'Flask', 'Streamlit', 'Next.js', 'Tailwind', 'Bootstrap', 'Node.js'].map(s => <li key={s}>{s}</li>)}
-              </ul>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <div className="border-b border-black pb-1 text-center">
-                <span className="font-mono text-[9px] font-bold uppercase tracking-widest">Databases</span>
-              </div>
-              <ul className="font-mono text-sm leading-tight grid grid-cols-3 gap-1 justify-items-center">
-                {['PostgreSQL', 'MySQL', 'SQLite', 'MongoDB', 'Redis'].map(s => <li key={s}>{s}</li>)}
-              </ul>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <div className="border-b border-black pb-1 text-center">
-                <span className="font-mono text-[9px] font-bold uppercase tracking-widest">Tools &amp; Technologies</span>
-              </div>
-              <ul className="font-mono text-sm leading-tight grid grid-cols-3 gap-1 justify-items-center">
-                {['Figma', 'Git', 'GitHub', 'Docker', 'Celery', 'Insomnia', 'Render', 'Vercel'].map(s => <li key={s}>{s}</li>)}
-              </ul>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <SkillSection title="Languages" items={['Python', 'JavaScript', 'C', 'SQL', 'HTML/CSS', 'Bash', 'LaTeX', 'Racket']} />
+            <SkillSection title="Frameworks & Libraries" items={['Django', 'DRF', 'FastAPI', 'Flask', 'Streamlit', 'Next.js', 'Tailwind', 'Bootstrap', 'Node.js']} />
+            <SkillSection title="Databases" items={['PostgreSQL', 'MySQL', 'SQLite', 'MongoDB', 'Redis']} />
+            <SkillSection title="Tools & Technologies" items={['Figma', 'Git', 'GitHub', 'Docker', 'Celery', 'Insomnia', 'Render', 'Vercel']} />
           </div>
         </section>
 
         <section className="hidden md:grid p-6 gap-4 bg-[linear-gradient(197deg,rgba(255,255,255,1)_70%,rgba(98,171,245,1)_85%,rgba(151,45,196,1)_100%)] backdrop-blur-sm h-40"></section>
 
-        <section id="projects" className="border-black border-t p-6 flex flex-col gap-4 bg-black text-white backdrop-blur-sm">
+        <section id="projects" className="border-t border-black p-6 flex flex-col gap-4 bg-black text-white">
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 bg-white"></div>
             <h2 className="font-mono text-[10px] uppercase tracking-[0.2em] font-bold">
@@ -226,93 +200,28 @@ export default function Home() {
             <h3 className="text-2xl md:text-4xl font-bold">My Projects</h3>
             <MemoryAddress />
           </div>
-          <p>A collection of the projects I&apos;ve been working on.</p>
+          <p>A collection of the projects I've been working on.</p>
 
-          <div className="border border-white flex flex-col md:flex-row backdrop-blur-sm">
-            <div className="border-b md:border-b-0 md:border-r border-black p-2 flex md:flex-col justify-between items-center bg-black text-white font-mono text-[9px] uppercase tracking-tighter">
-              <span className="[writing-mode:vertical-lr] rotate-180 hidden md:block">Project_ID: 001</span>
-              <span className="md:hidden">ID: 001</span>
-              <span className="[writing-mode:vertical-lr] rotate-180 hidden md:block">Status: Finalized</span>
-              <span className="md:hidden">Stat: Finalized</span>
-            </div>
-            <div className="p-6 flex flex-col md:flex-row gap-8">
-              <div className="flex flex-col gap-4">
-                <div className="flex items-baseline gap-4 border-b border-black pb-2">
-                  <h4 className="text-3xl font-bold">Hivemind</h4>
-                </div>
-                <p className="text-sm md:text-base leading-tight tracking-tight text-justify">
-                  Git meets Notion meets Democracy. Hivemind is a note-taking application centred
-                  around collaboration through version control and vote-based features, targeting
-                  students and startups alike. In informal group environments, many ideas gain
-                  verbal consensus but never solidify. Important proposals often fade out of the
-                  collective memory before being formally documented. With Hivemind, create a shared
-                  note-taking space where contributors can independently draft, review, and vote on
-                  changes before they are merged into an official record.
-                  <br /><br />
-                  Built at Hack The Valley X @ U of T Scarborough
-                </p>
-                <div className="mt-auto flex flex-wrap gap-2">
-                  {['React', 'Tailwind_CSS', 'Django', 'Django_REST_Framework', 'PostgreSQL'].map(t => (
-                    <span key={t} className="border border-white px-2 py-0.5 font-mono text-[9px] uppercase">{t}</span>
-                  ))}
-                </div>
-              </div>
-              <div className="md:w-64 shrink-0 flex items-center">
-                <div className="border border-white bg-white">
-                  <Image src="/hivemind.png" alt="Hivemind" width={256} height={192} className="w-full h-auto" />
-                </div>
-              </div>
-            </div>
-          </div>
+          <ProjectItem
+            id="001"
+            status="Finalized"
+            title="Hivemind"
+            description="Git meets Notion meets Democracy. Hivemind is a note-taking application centred around collaboration through version control and vote-based features, targeting students and startups alike. In informal group environments, many ideas gain verbal consensus but never solidify. Important proposals often fade out of the collective memory before being formally documented. With Hivemind, create a shared note-taking space where contributors can independently draft, review, and vote on changes before they are merged into an official record."
+            footnote="Built at Hack The Valley X @ U of T Scarborough"
+            tags={['React', 'Tailwind_CSS', 'Django', 'Django_REST_Framework', 'PostgreSQL']}
+            image={{ src: '/hivemind.png', alt: 'Hivemind' }}
+          />
 
-          <div className="w-full border border-white flex flex-col md:flex-row backdrop-blur-sm">
-            <div className="border-b md:border-b-0 md:border-r border-black p-2 flex md:flex-col justify-between items-center bg-black text-white font-mono text-[9px] uppercase tracking-tighter">
-              <span className="[writing-mode:vertical-lr] rotate-180 hidden md:block">Project_ID: 002</span>
-              <span className="md:hidden">ID: 002</span>
-              <span className="[writing-mode:vertical-lr] rotate-180 hidden md:block">Status: Finalized</span>
-              <span className="md:hidden">Stat: Finalized</span>
-            </div>
-            <div className="p-6 flex flex-col md:flex-row gap-8">
-              <div className="flex flex-col gap-4">
-                <div className="flex items-baseline gap-4 border-b border-black pb-2">
-                  <h4 className="text-3xl font-bold">MCalcV3</h4>
-                </div>
-                <p className="text-sm md:text-base leading-tight tracking-tight text-justify">
-                  MCalcV3 is a recursive molar mass calculation script and CLI tool to streamline the
-                  bane of high school chemistry. It&apos;s designed to be run on graphing calculators,
-                  specifically for the MicroPython implementation. With 100% error coverage, input
-                  IUPAC-standard chemical formulas as exactly you see them, and get its molar mass to
-                  two significant digits.
-                </p>
-                <div className="mt-auto flex flex-wrap gap-2">
-                  <span className="border border-white px-2 py-0.5 font-mono text-[9px] uppercase">Python</span>
-                </div>
-              </div>
-              <div className="md:w-64 shrink-0 flex items-center">
-                <div className="border border-white bg-white">
-                  <Image src="/chem.jpg" alt="Chemistry" width={256} height={192} className="w-full h-auto" />
-                </div>
-              </div>
-            </div>
-          </div>
+          <ProjectItem
+            id="002"
+            status="Finalized"
+            title="MCalcV3"
+            description="MCalcV3 is a recursive molar mass calculation script and CLI tool to streamline the bane of high school chemistry. It's designed to be run on graphing calculators, specifically for the MicroPython implementation. With 100% error coverage, input IUPAC-standard chemical formulas as exactly you see them, and get its molar mass to two significant digits."
+            tags={['Python']}
+            image={{ src: '/chem.jpg', alt: 'Chemistry' }}
+          />
         </section>
       </div>
-
-      <footer className="max-w-6xl mx-auto flex justify-between items-center py-6 px-2">
-        <div className="flex gap-1 h-12">
-          {[2, 4, 1, 3, 1, 6, 2, 1, 4, 2, 5, 8, 1, 7, 3, 1, 1, 4, 2].map((w, i) => (
-            <div key={i} className="bg-black" style={{ width: `${w}px` }}></div>
-          ))}
-          <div className="flex flex-col justify-end text-[8px] font-mono ml-1">
-            4 251884 124119 <br />
-            Inspired by Digitalism&apos;s JPEG
-          </div>
-        </div>
-        <div className="text-[10px] font-mono text-right uppercase">
-          Status: Study Term<br />
-          Location: Waterloo, ON
-        </div>
-      </footer>
     </main>
   )
 }
