@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import DateDisplay from '@/components/DateDisplay'
 import MemoryAddress from '@/components/MemoryAddress'
 import ProjectItem from '@/components/ProjectItem'
@@ -9,7 +8,7 @@ import SocialLinks from '@/components/SocialLinks'
 
 const navLink = "p-4 md:border-r border-b md:border-b-0 border-black hover:bg-black hover:text-white transition-colors duration-250"
 
-export default function Home() {
+export default function App() {
   return (
     <main className="min-h-screen p-4 md:p-8 font-sans selection:bg-amber-400 animate-boot opacity-0">
 
@@ -51,7 +50,7 @@ export default function Home() {
         <section className="grid grid-cols-1 md:grid-cols-12 grow">
           <div className="md:col-span-4 p-6 flex flex-col justify-between items-center gap-8">
             <div className="space-y-4">
-              <Image src="/headshot.png" alt="Me!" width={400} height={400} className="w-full h-auto" />
+              <img src="/headshot.png" alt="Me!" width={400} height={400} className="w-full h-auto" />
               <div className="text-[10px] font-mono uppercase leading-tight">
                 <span>All contribution produced and performed by Eddie. </span>
                 <span>(P) & (C) 2030 UW CS. Design by Intent.</span>
@@ -81,7 +80,7 @@ export default function Home() {
             as document software architecture and system integration. You can catch me staying up late studying for classes
             and working on personal projects, and regularly participating in hackathons. What really motivates me is the
             process and result of developing software to solve everyday problems and reduce common frictions. I care greatly
-            about ensuring that my applications are secure, performant, and most importantly user-oriented. 
+            about ensuring that my applications are secure, performant, and most importantly user-oriented.
           </p>
         </section>
 
@@ -98,7 +97,7 @@ export default function Home() {
 
         <section className="hidden md:grid bg-[linear-gradient(197deg,rgba(255,255,255,1)_70%,rgba(98,171,245,1)_85%,rgba(151,45,196,1)_100%)] backdrop-blur-sm h-40" />
 
-        
+
 
         <section id="projects" className="border-t border-black p-6 flex flex-col gap-4 bg-black text-white">
           <SectionHeader label="Section_03 // Repository" inverted />

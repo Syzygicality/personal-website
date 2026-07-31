@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 interface ProjectItemProps {
   id: string
   status: string
@@ -36,7 +34,7 @@ export default function ProjectItem({ id, status, title, description, footnote, 
         </div>
         <div className="md:w-64 shrink-0 flex items-center">
           <div className="border border-white">
-            <Image src={image.src} alt={image.alt} width={256} height={192} className="w-full h-auto" />
+            <img src={image.src} alt={image.alt} width={256} height={192} className="w-full h-auto" />
           </div>
         </div>
       </div>
